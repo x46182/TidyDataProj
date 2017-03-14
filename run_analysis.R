@@ -11,7 +11,7 @@ act.lab <- read.table("activity_labels.txt", sep = " ") #column 2 for labels, c1
 setwd("test")
 test.df <- read.table("X_test.txt")
 test.activity <- read.table("y_test.txt")
-test.activity <- merge(test.activity, act.lab, by.x = "V1", by.y = "V1")
+test.activity <- merge(test.activity, act.lab, by.x = "V1", by.y = "V1", sort = F)
 sub.test <- read.table("subject_test.txt")
 #add the "Subject" and "Activity Columns to test.df
 test.df$Subject <- sub.test$V1
@@ -21,7 +21,7 @@ setwd("../train")
 train.df <- read.table("X_train.txt")
 sub.train <- read.table("subject_train.txt")
 train.activity <- read.table("y_train.txt")
-train.activity <- merge(train.activity, act.lab, by.x = "V1", by.y = "V1")
+train.activity <- merge(train.activity, act.lab, by.x = "V1", by.y = "V1", sort = F)
 #add "Subject" and "Activity" columns to train.df
 train.df$Subject <- sub.train$V1
 train.df$Activity <- train.activity$V2
