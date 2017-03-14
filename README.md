@@ -33,7 +33,7 @@ This repository includes following files:
     - Appropriately labels the data set with descriptive variable names.
     - From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-- 'Code_Book.txt's
+- 'Code_Book.txt' - this code book describes the variables in the original dataset and at the bottom explicitly lists the final variables derived from the original variables.  The means and standard deviation variables from the original feature vector were averaged over each activity and each subject to create the final dataset. 
 
 
 
